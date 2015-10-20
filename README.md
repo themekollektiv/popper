@@ -1,14 +1,10 @@
 # Popper
-Contributors: Morten Rand-Hendriksen
-Tags: accessibility-ready, light, one-column, two-column, left-sidebar, right-sidebar, responsive-layout, custom-colors, custom-header, custom-menu, featured-images, theme-options, threaded-comments, translation-ready,
-Requires at least: 3.8
-Tested up to: 4.4
-License: GPL 2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-Popper is an accessible content-first theme built around beautiful fonts and lots of white space.
+Popper is an accessible content-first theme built around beautiful fonts and lots of white space designed and developed by [Morten Rand-Hendriksen](http://mor10.com) for [lynda.com - a LinkedIn Company](http://lynda.com/mor10).
 
 ## Features
+
+### Article Decks
+To display an article deck (short one-paragraph synopsis displayed after post title, but before post meta), add a custom excerpt to the post.
 
 ### Customizer Options
 Extended options available from the Customizer:
