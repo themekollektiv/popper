@@ -1,0 +1,181 @@
+# Copyright (C) 2015 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Popper\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2015-09-30 14:43-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: footer.php:18
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: functions.php:132
+msgid "expand child menu"
+msgstr ""
+
+#: functions.php:133
+msgid "collapse child menu"
+msgstr ""
+
+#: image.php:27
+msgid "Featured in: "
+msgstr ""
+
+#: image.php:28
+msgid "Full size image: "
+msgstr ""
+
+#: image.php:29
+msgid "Edit attachment post"
+msgstr ""
+
+#: image.php:50
+msgid "Pages:"
+msgstr ""
+
+#: inc/customizer.php:35
+msgid "Header Background Color"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Theme Options"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Change the default display options for the theme."
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "Sidebar position"
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "No sidebar (default)"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/template-tags.php:265
+msgid "&larr; Previous"
+msgstr ""
+
+#: inc/template-tags.php:266
+msgid "Next &rarr;"
+msgstr ""
+
+#: inc/template-tags.php:274
+msgid "Posts navigation"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: inc/template-tags.php:289 template-parts/content.php:79
+#, php-format
+msgid "Continue reading%s"
+msgstr ""
+
+#: inc/template-tags.php:319
+msgid "Attachment post navigation"
+msgstr ""
+
+#: single.php:29
+msgid "Next"
+msgstr ""
+
+#: single.php:30
+msgid "Next post:"
+msgstr ""
+
+#: single.php:32
+msgid "Previous"
+msgstr ""
+
+#: single.php:33
+msgid "Previous post:"
+msgstr ""
+
+#: template-parts/content-none.php:16
+msgid "Page not available"
+msgstr ""
+
+#. translators: %s = search query
+#: template-parts/content-none.php:19
+#, php-format
+msgid "Nothing found for &ldquo;%s&rdquo;"
+msgstr ""
+
+#: template-parts/content-none.php:21
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:30
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:39
+msgid "You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:"
+msgstr ""
+
+#: template-parts/content-none.php:53
+msgid "Most recent posts:"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: template-parts/content.php:54
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: widgets/recent-comments.php:12
+msgid "Displays recent comments with user avatar and excerpt."
+msgstr ""
+
+#: widgets/recent-comments.php:13
+msgid "Recent Comments"
+msgstr ""
+
+#: widgets/recent-comments.php:64
+msgid "on"
+msgstr ""
+
+#: widgets/recent-comments.php:102 widgets/recent-posts.php:105
+msgid "Title"
+msgstr ""
+
+#: widgets/recent-comments.php:107
+msgid "Number of comments to display"
+msgstr ""
+
+#: widgets/recent-comments.php:109 widgets/recent-posts.php:112
+msgid "Defaults to 5 if empty"
+msgstr ""
+
+#: widgets/recent-posts.php:13
+msgid "Your site&rsquo;s most recent posts with featured image and publishing date."
+msgstr ""
+
+#: widgets/recent-posts.php:14
+msgid "Recent Posts"
+msgstr ""
+
+#: widgets/recent-posts.php:110
+msgid "Number of posts to display"
+msgstr ""
