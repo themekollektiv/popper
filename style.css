@@ -510,14 +510,12 @@ input[type="submit"] {
 	border-color: #000;
 	border-radius: 0;
 	background: #fff;
-/*	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);*/
 	color: #000;
 	font-family: "Fira Sans", sans-serif;
 	font-size: 12px;
 	font-size: 0.75rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
-	/*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);*/
 }
 
 button:hover,
@@ -526,7 +524,6 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	background: #000;
 	color: #fff;
-	/*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);*/
 }
 
 button:focus,
@@ -788,7 +785,6 @@ a:active {
 }
 
 /* Pages and Menu widgets */
-
 .widget_pages .children,
 .widget_nav_menu .sub-menu {
 	padding-top: 0;
@@ -818,8 +814,6 @@ a:active {
 }
 
 /* RSS widget */
-
-
 .widget_rss li {
 	margin-bottom: 1em;
 }
@@ -843,7 +837,6 @@ a:active {
 }
 
 /* Search widget */
-
 .widget_search input[type="search"] {
 	box-sizing: border-box;
 	width: 100%;
@@ -853,7 +846,6 @@ a:active {
 }
 
 /* Calendar widget */
-
 .widget_calendar {
 	font-family: "Fira Sans", sans-serif;
 }
@@ -891,15 +883,12 @@ a:active {
 }
 
 /* Text widget */
-
 .textwidget {
 	font-size: .8em;
 	line-height: 1.6em;
 }
 
-
 /* Custom Recent Comments and Recent Posts widgets */
-
 .widget_popper_recent_comments ul,
 .widget_popper_recent_posts ul {
 	margin-top: 2em;
@@ -987,7 +976,6 @@ a:active {
 }
 
 /* Custom Recent Posts widget */
-
 .widget_popper_recent_posts .post-icon {
 	width: 50px;
 	height: 50px;
@@ -1023,19 +1011,6 @@ a:active {
 */
 
 @media screen and (min-width: 50em) {
-	/*.no-sidebar #secondary {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: 0;
-		padding: 1.8em .9em;
-	}
-
-	.no-sidebar .widget {
-		float: left;
-		width: 300px;
-		margin: 0 .9em 1.8em;
-	}*/
 
 	/* If only one or only two widgets are displayed, make them twice as wide. */
 	.no-sidebar .widget:only-of-type,
@@ -1105,9 +1080,6 @@ a:active {
 		border-left: 1px solid #ededed;
 	}
 
-
-
-
 	/* Sidebar Left layouts */
 	.sidebar-left .content-area {
 		float: right;
@@ -1127,8 +1099,6 @@ a:active {
 	}
 
 }
-
-
 
 /*--------------------------------------------------------------
 ## Global
@@ -1198,6 +1168,7 @@ a:active {
 .site-logo a:focus {
 	outline: 2px solid white;
 }
+
 .site-firstletter {
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 1.5em;
@@ -1213,11 +1184,8 @@ a:active {
 }
 
 .site-branding {
-/*	padding-top: 1em;
-	padding-bottom: 1em;*/
 	text-align: center;
 }
-
 
 .site-title {
 	margin: 1.7em 1em 0;
@@ -1300,7 +1268,6 @@ a:active {
 }
 
 /* Small menu. */
-
 .menu-toggle {
 	position: fixed;
 	z-index: 100;
@@ -1426,7 +1393,7 @@ a:active {
     border: 1px solid #fff;
     content: "";
     color: #fff;
-    text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
+    text-transform: lowercase; /* Stop screen readers from reading the text as capital letters */
 }
 
 .toggled-on .dropdown-toggle {
@@ -1508,7 +1475,6 @@ a:active {
 
 	.main-navigation a:hover,
 	.main-navigation a:focus {
-		/*background: #eee;*/
 		background: transparent;
 		color: #fff;
 		text-decoration: underline;
@@ -1588,6 +1554,7 @@ a:active {
 		padding: 2em 3em;
 	}
 }
+
 .nav-links {
 	max-width: 45em;
 	margin: 0 auto;
@@ -1701,6 +1668,7 @@ a:active {
 	padding: .8em 1.1em;
 	font-weight: 700;
 }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1775,6 +1743,7 @@ a:active {
 }
 
 @media screen and (min-width: 30em) {
+
 	.entry-title.index-excerpt {
 		margin-top: 1.5em;
 		font-size: 2em;
@@ -1823,6 +1792,7 @@ a:active {
 .continue-reading a::after {
 	content: "…"
 }
+
 .continue-reading::after {
 	display: block;
     content: "";
@@ -1834,6 +1804,7 @@ a:active {
 .entry-content .continue-reading::after {
 	display: none;
 }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1989,6 +1960,7 @@ a:active {
 		padding-left: 1em;
 	}
 }
+
 .author-avatar {
 	height: 50px;
 	width: 50px;
@@ -2005,6 +1977,7 @@ a:active {
 	display: block;
 	padding:  0;
 }
+
 .entry-meta a {
 	font-weight: 700;
 }
@@ -2017,7 +1990,6 @@ a:active {
 .group-blog .byline {
 	display: inline;
 }
-
 
 .site-content li {
 	line-height: 1.6em;
@@ -2032,6 +2004,7 @@ a:active {
 .site-content li:last-child {
 	margin-bottom: 0;
 }
+
 @media screen and (min-width: 50em) {
 
 	.has-avatar {
@@ -2039,6 +2012,7 @@ a:active {
 		text-align: left;
 		width: 20em;
 	}
+
 	.author-avatar {
 		height: 70px;
 		width: 70px;
@@ -2047,6 +2021,7 @@ a:active {
 		margin-bottom: 0;
 	}
 }
+
 .page-content,
 .deck,
 .entry-content,
@@ -2081,7 +2056,6 @@ a:active {
 
 
 /* Entry footer + index entry meta */
-
 .entry-footer::before,
 .entry-footer::after {
 	display: block;
@@ -2177,6 +2151,7 @@ a:active {
 	border-bottom: 1px solid #c3c3c3;
 	margin-bottom: 3em;
 }
+
 .comment-meta {
 	position: relative;
 	margin-left: 70px;
@@ -2224,6 +2199,7 @@ a:active {
 	}
 
 }
+
 @media screen and (min-width: 50em) {
 
 	.children {
@@ -2282,7 +2258,6 @@ a:active {
 	padding-bottom: .5em;
 	font-size: .8em;
 	line-height: 1em;
-	/*border-bottom: 1px solid #c3c3c3;*/
 }
 
 .comment-metadata a {
@@ -2328,7 +2303,6 @@ a:active {
 }
 
 /* Comment Form */
-
 .comment-respond::after {
 	display: block;
 	margin: 2em auto 4em;
@@ -2608,7 +2582,6 @@ img.alignleft {
 }
 
 /* Conditional styles for Attachment Pages */
-
 .attachment .image-attachment {
 	max-width: inherit;
 	margin: 0;
