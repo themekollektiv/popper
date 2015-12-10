@@ -71,17 +71,7 @@ $first_post = $wp_query->current_post == 0 && !is_paged() && is_front_page();
 
 		</div><!-- .entry-content -->
 
-		<div class="continue-reading">
-			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-			<?php
-			echo sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading%s', 'popper' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( ' <span class="screen-reader-text">"', '"</span>', false )
-			);
-			?>
-			</a>
-		</div><!-- .continue-reading -->
+		<?php echo popper_continue_reading(); ?>
 
 	<?php } ?>
 

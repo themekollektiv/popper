@@ -12,9 +12,9 @@ if ( ! function_exists( 'popper_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function popper_posted_on() {
-	
+
 	$author_id = get_the_author_meta( 'ID' );
-	
+
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -36,7 +36,7 @@ function popper_posted_on() {
 		esc_html_x( 'by %s', 'post author', 'popper' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
-	
+
 	// Display author avatar if author has a Gravatar
 	if ( validate_gravatar( $author_id ) ) {
 		echo '<div class="meta-content has-avatar">';
@@ -44,7 +44,7 @@ function popper_posted_on() {
 	} else {
 		echo '<div class="meta-content">';
 	}
-	
+
 	echo '<span class="byline">' . $byline . ' </span><span class="posted-on">' . $posted_on . ' </span>'; // WPCS: XSS OK.
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
@@ -61,9 +61,9 @@ if ( ! function_exists( 'popper_index_posted_on' ) ) :
  * Prints HTML with meta information for post-date/time and author on index pages.
  */
 function popper_index_posted_on() {
-	
+
 	$author_id = get_the_author_meta( 'ID' );
-	
+
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -85,7 +85,7 @@ function popper_index_posted_on() {
 		esc_html_x( 'by %s', 'post author', 'popper' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
-	
+
 	echo '<div class="meta-content">';
 	echo '<span class="byline">' . $byline . ' </span><span class="posted-on">' . $posted_on . ' </span>'; // WPCS: XSS OK.
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -218,7 +218,7 @@ function validate_gravatar($id_or_email) {
 		}
 	    wp_cache_set($hashkey, $data, $group = '', $expire = 60*5);
 
-	}		
+	}
 	if ($data == '200'){
 		return true;
 	} else {
@@ -289,11 +289,11 @@ function popper_modify_read_more_link() {
 		wp_kses( __( 'Continue reading%s', 'popper' ), array( 'span' => array( 'class' => array() ) ) ),
 		the_title( ' <span class="screen-reader-text">"', '"</span>', false )
 	);
-	$read_more_string = 
+	$read_more_string =
 	'<div class="continue-reading">
 		<a href="' . get_permalink() . '" rel="bookmark">' . $read_more_link . '</a>
 	</div>';
-	
+
 	return $read_more_string;
 }
 add_filter( 'the_content_more_link', 'popper_modify_read_more_link' );
@@ -302,7 +302,7 @@ add_filter( 'the_content_more_link', 'popper_modify_read_more_link' );
  * Customize ellipsis at end of excerpts
  */
 function popper_excerpt_more( $more ) {
-	return '…';
+	return popper_continue_reading();
 }
 add_filter('excerpt_more', 'popper_excerpt_more');
 
@@ -325,12 +325,12 @@ function popper_attachment_nav() {
 					<?php next_image_link( false, '<span class="post-title">Next image</span>' ); ?>
 				</div>
 			</div><!-- .nav-links -->
-			
-			
+
+
 		</div>
 	</nav>
-		
-		
+
+
 	<?php
 }
 endif;
@@ -386,3 +386,18 @@ function popper_the_attached_image() {
 	);
 }
 endif;
+
+function popper_continue_reading() { ?>
+	<div class="continue-reading">
+		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+		<?php
+		echo sprintf(
+			/* translators: %s: Name of current post. */
+			wp_kses( __( 'Continue reading%s', 'popper' ), array( 'span' => array( 'class' => array() ) ) ),
+			the_title( ' <span class="screen-reader-text">"', '"</span>', false )
+		);
+		?>
+		</a>
+	</div><!-- .continue-reading -->
+	<?php
+}
