@@ -21,7 +21,7 @@ $first_post = $wp_query->current_post == 0 && !is_paged() && is_front_page();
 		if ( has_post_thumbnail() ) { ?>
 			<figure class="featured-image">
 				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-					<?php the_post_thumbnail('popper-featured-image'); ?>
+					<?php the_post_thumbnail(); ?>
 				</a>
 			</figure>
 		<?php } ?>
