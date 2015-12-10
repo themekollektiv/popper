@@ -41,7 +41,7 @@ function popper_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'popper-featured-image', 828, 360, true );
+	set_post_thumbnail_size( 828, 360, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -76,9 +76,7 @@ function popper_setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( array( 'inc/editor-style.css', 'fonts/fira-sans/fira-sans.css', '/fonts/merriweather/merriweather.css', '/icons/style.css' ) );
-
-
+	add_editor_style( array( 'inc/editor-style.css', '//fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic|Merriweather:400,300,300italic,400italic,700,700italic', '/icons/style.css' ) );
 }
 endif; // popper_setup
 add_action( 'after_setup_theme', 'popper_setup' );
@@ -91,7 +89,7 @@ add_action( 'after_setup_theme', 'popper_setup' );
  * @global int $content_width
  */
 function popper_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'popper_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'popper_content_width', 702 );
 }
 add_action( 'after_setup_theme', 'popper_content_width', 0 );
 
@@ -102,7 +100,7 @@ add_action( 'after_setup_theme', 'popper_content_width', 0 );
  */
 function popper_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'popper' ),
+		'name'          => esc_html__( 'Widget Area', 'popper' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -119,14 +117,12 @@ add_action( 'widgets_init', 'popper_widgets_init' );
 function popper_scripts() {
 	wp_enqueue_style( 'popper-style', get_stylesheet_uri() );
 
-	// Fonts: Fira Sans and Merriweather, downloaded from https://google-webfonts-helper.herokuapp.com/fonts
-	wp_enqueue_style( 'popper-fira-sans', get_template_directory_uri() . '/fonts/fira-sans/fira-sans.css' );
-	wp_enqueue_style( 'popper-merriweather', get_template_directory_uri() . '/fonts/merriweather/merriweather.css' );
+	// Fonts: Fira Sans and Merriweather, https://www.google.com/fonts
+	wp_enqueue_style( 'popper-google-fonts', '//fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic|Merriweather:400,300,300italic,400italic,700,700italic' );
 
 	// Icon font
 	wp_enqueue_style( 'popper-icons', get_template_directory_uri() . '/icons/style.css' );
 
-	wp_enqueue_script( 'popper-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
 	wp_enqueue_script( 'popper-functions', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150916', true );
 
 	wp_enqueue_script( 'popper-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
