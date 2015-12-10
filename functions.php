@@ -131,7 +131,7 @@ function popper_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_localize_script( 'popper-navigation', 'screenReaderText', array(
+	wp_localize_script( 'popper-functions', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'popper' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'popper' ) . '</span>',
 	) );

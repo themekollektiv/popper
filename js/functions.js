@@ -4,7 +4,7 @@
  * Handles toggling the navigation menu for small screens and enables tab
  * support for dropdown menus.
  */
-( function($) {
+( function( $ ) {
 	var container, button, menu, links, subMenus;
 
 	container = document.getElementById( 'site-navigation' );
@@ -79,20 +79,13 @@
 		}
 	}
 
-	/* global screenReaderText */
-
-	/**
-	 * Handler for drop-down menu items.
-	 * Gently lifted and reworked from Twenty Fifteen
-	 */
-
 	function initMainNavigation( container ) {
 		// Add dropdown toggle that display child menu items.
-		container.find( '.menu-item-has-children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
+		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
 
 		// Toggle buttons and submenu items with active children menu items.
-		// container.find( '.current-menu-ancestor > button' ).addClass( 'toggle-on' );
-		// container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+		container.find( '.current-menu-ancestor > button' ).addClass( 'toggle-on' );
+		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
 
 		container.find( '.dropdown-toggle' ).click( function( e ) {
 			var _this = $( this );
@@ -118,8 +111,8 @@
 		}
 	});
 
-
 	// Hide/show toggle button on scroll
+
 	var position, direction, previous;
 
 	$(window).scroll(function(){
@@ -140,7 +133,7 @@
 		}
 		position = $(this).scrollTop();
 	});
-	
+
 	// Wrap centered images in a new figure element
 	$( 'img.aligncenter' ).wrap( '<figure class="centered-image"></figure>');
 
