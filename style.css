@@ -1104,16 +1104,6 @@ a:active {
 ## Global
 --------------------------------------------------------------*/
 
-.centered {
-	margin: 0 auto;
-}
-
-@media screen and (min-width: 50em) {
-	.centered {
-		max-width: 50em;
-	}
-}
-
 .page-title {
 	text-align: center;
 	font-style: italic;
@@ -1369,6 +1359,7 @@ a:active {
 	bottom: 1em;
 	left: 1em;
 	font-size: 1em;
+	font-weight: 400;
 	text-transform: uppercase;
 	background-color: #000;
 	color: #fff;
