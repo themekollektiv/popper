@@ -1,8 +1,8 @@
 <?php
 
 /*
- * Custom Recent Comments widget.
- * This code replaces the default widget with a more advanced one that shows commenter avatar, and comment excerpt.
+ * Enhanced Recent Comments widget.
+ * This code adds a new widget that shows commenter avatar, and comment excerpt.
  * Gently lifted and reworked from Anders Norén's Lovecraft theme: http://www.andersnoren.se/teman/lovecraft-wordpress-theme/
  */
 
@@ -30,7 +30,10 @@ class popper_recent_comments extends WP_Widget {
 
 			echo $before_title . $widget_title . $after_title;
 
-		} ?>
+		} else {
+			echo $before_title . esc_html( 'Recent Comments', 'popper' ) . $after_title;
+		}
+		?>
 
 			<ul class="popper-widget-list">
 
@@ -61,7 +64,7 @@ class popper_recent_comments extends WP_Widget {
 									</div>
 									<p class="title"><span><?php comment_author(); ?></span></p>
 									<p class="excerpt"><?php echo esc_attr(comment_excerpt($comment->comment_ID)); ?></p>
-									<p class="original-title"><span><?php _e('on','popper'); ?></span> <?php the_title_attribute($comment->comment_post_ID); ?></p>
+									<p class="original-title"><span><?php _e('on','popper'); ?></span> <?php the_title_attribute( array( 'post' => $comment->comment_post_ID ) ); ?></p>
 								</a>
 							</li>
 

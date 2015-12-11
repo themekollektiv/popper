@@ -1,8 +1,8 @@
 <?php
 
 /*
- * Custom Recent Posts widget.
- * This code replaces the default widget with a more advanced one that shows the featured image, post title, and publishing date.
+ * Enhanced Recent Posts widget.
+ * This code adds a new widget that shows the featured image, post title, and publishing date.
  * Gently lifted and reworked from Anders Norén's Lovecraft theme: http://www.andersnoren.se/teman/popper-wordpress-theme/
  */
 
@@ -32,7 +32,10 @@ class popper_recent_posts extends WP_Widget {
 
 			echo $before_title . $widget_title . $after_title;
 
-		} ?>
+		} else {
+			echo $before_title . esc_html( 'Recent Posts', 'popper' ) . $after_title;
+		}
+		?>
 
 			<ul class="popper-widget-list">
 
