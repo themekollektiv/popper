@@ -49,7 +49,7 @@
 			</a>
 		</div>
 
-		<div class="site-branding centered<?php if ( is_singular() ) { echo ' screen-reader-text'; } ?>">
+		<div class="site-branding<?php if ( is_singular() ) { echo ' screen-reader-text'; } ?>">
 			<?php if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
@@ -60,7 +60,6 @@
 			if ( $description || is_customize_preview() ) : ?>
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
-			?>
 		</div><!-- .site-branding -->
 
 

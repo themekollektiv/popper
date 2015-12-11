@@ -1206,16 +1206,18 @@ a:active {
 	opacity: .5;
 }
 
-.header-background-image .site-title::after {
-	border-bottom-color: transparent;
-}
-
 .site-description {
-	margin: 2em 2em 2em;
+	margin: 2em 2em 3em;
 	font-size: 110%;
 	color: #ededed;
 }
 
+.header-background-image .site-title,
+.header-background-image .site-tite::after,
+.header-background-image .site-description {
+	text-shadow: #000 0 0 10px;
+
+}
 @media screen and (min-width: 50em) {
 	.site-header {
 		min-height: 4em;
@@ -1429,7 +1431,6 @@ a:active {
 	.main-navigation.toggled {
 		position: relative;
 		min-height: 3.5em;
-		max-width: 58em;
 		margin: 0 auto;
 		padding: 0 3.5em;
 		background-color: #000;
@@ -1443,9 +1444,9 @@ a:active {
 
 	.main-navigation ul,
 	.main-navigation.toggled ul {
+		min-height: 4em;
 		max-height: none;
-		margin-top: .2em;
-		margin-bottom: .5em;
+		margin: 0;
 		padding-left: 0;
 		text-align: center;
 	}
@@ -1918,7 +1919,7 @@ a:active {
 		width: 100%;
 		width: 100vw;
 		left: 0;
-		left: calc((-100vw + 52.2em) / 2);
+		left: calc((-100vw + 51.2em) / 2);
 		overflow: hidden;
 	}
 }
@@ -1955,7 +1956,7 @@ a:active {
 
 @media screen and (min-width: 70.75em) {
 	.sidebar-left .entry-meta {
-		left: calc((-100vw + 66.2em) / 2);
+		left: calc((-100vw + 65.3em) / 2);
 	}
 }
 

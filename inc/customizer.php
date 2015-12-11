@@ -119,7 +119,7 @@ function popper_customize_css() {
     <?php
 	}
 
-	if ( $header_color == '#ffffff' ) {
+	if ( $header_color == '#ffffff' && !get_header_image() ) {
 	?>
 		<style type="text/css">
 			.main-navigation {
