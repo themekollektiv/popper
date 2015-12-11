@@ -1337,7 +1337,7 @@ a:active {
 	text-transform: lowercase; /* Stop screen readers from reading the text as capital letters */
 }
 
-.dropdown-toggle:after {
+.dropdown-toggle::after {
 	content: "\f078";
 	font-size: 14px;
 	line-height: 27px;
@@ -1804,9 +1804,6 @@ a:active {
     margin: 4em auto 0;
 }
 
-.entry-content .continue-reading::after {
-	display: none;
-}
 
 /*--------------------------------------------------------------
 ## Posts and pages

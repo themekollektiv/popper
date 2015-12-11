@@ -49,29 +49,17 @@ $first_post = $wp_query->current_post == 0 && !is_paged() && is_front_page();
 	if ( $first_post == true ) { ?>
 		<div class="entry-content">
 			<?php
-				the_content( sprintf(
-					/* translators: %s: Name of current post. */
-					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'popper' ), array( 'span' => array( 'class' => array() ) ) ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				) );
+				the_content();
 			?>
 		</div><!-- .entry-content -->
-
-		<footer class="entry-footer">
-			<?php popper_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
 
 	<?php } else { ?>
 
 		<div class="entry-content index-excerpt">
-			<?php
-				the_excerpt();
-			?>
-
-
+			<?php the_excerpt(); ?>
 		</div><!-- .entry-content -->
 
-		<?php echo popper_continue_reading(); ?>
+		<?php echo popper_modify_read_more_link(); ?>
 
 	<?php } ?>
 

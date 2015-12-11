@@ -302,7 +302,7 @@ add_filter( 'the_content_more_link', 'popper_modify_read_more_link' );
  * Customize ellipsis at end of excerpts
  */
 function popper_excerpt_more( $more ) {
-	return popper_continue_reading();
+	return "…";
 }
 add_filter('excerpt_more', 'popper_excerpt_more');
 
@@ -386,18 +386,3 @@ function popper_the_attached_image() {
 	);
 }
 endif;
-
-function popper_continue_reading() { ?>
-	<div class="continue-reading">
-		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-		<?php
-		echo sprintf(
-			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Continue reading%s', 'popper' ), array( 'span' => array( 'class' => array() ) ) ),
-			the_title( ' <span class="screen-reader-text">"', '"</span>', false )
-		);
-		?>
-		</a>
-	</div><!-- .continue-reading -->
-	<?php
-}

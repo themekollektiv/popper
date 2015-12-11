@@ -58,7 +58,10 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php popper_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<?php
+		if ( $first_post == false ) { ?>
+			<footer class="entry-footer">
+				<?php popper_entry_footer(); ?>
+			</footer><!-- .entry-footer -->
+		<?php } ?>
 </article><!-- #post-## -->
