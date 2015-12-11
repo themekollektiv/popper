@@ -1,5 +1,5 @@
 # Popper
-Popper is an accessible content-first theme built around beautiful fonts and lots of white space designed and developed by [Morten Rand-Hendriksen](http://mor10.com) for [lynda.com - a LinkedIn Company](http://lynda.com/mor10).
+Popper is an accessible content-first theme built around beautiful fonts and lots of white space designed and developed by [Morten Rand-Hendriksen](http://mor10.com) for [Lynda.com - a LinkedIn Company](http://lynda.com/mor10).
 
 ## Features
 
