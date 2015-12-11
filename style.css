@@ -4,7 +4,7 @@ Theme URI: http://mor10.com/popper/
 Author: Morten Rand-Hendriksen
 Author URI: http://lynda.com/mor10
 Description: Designed and built around three basic principles - acccessibility, mobile- and touch friendly design, and content in focus - Popper is a great option whether you are building a site, a portfolio, or a blog. The header is fully customizable with colors and background images, the site icon appears as the home button in the top left-hand corner, the menu is easily available in the bottom left-hand corner on mobile devices, and you have the option of displaying widgets at the bottom, or to the left or right. The theme also comes with custom widgets for Recent Posts and Recent Comments.
-Version: 0.9.3
+Version: 0.9.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: popper
@@ -741,7 +741,6 @@ a:active {
 	padding-bottom: .35em;
 }
 
-
 @media screen and (min-width: 30em) {
 	.widget li ul,
 	.widget li ol {
@@ -760,7 +759,6 @@ a:active {
 	text-decoration: underline;
 }
 
-
 /* Make sure select elements fit in widgets. */
 .widget select {
 	width: 100%;
@@ -777,7 +775,6 @@ a:active {
 	padding-top: 0;
 	padding-bottom: .5em;
 }
-
 
 /* Search widget. */
 .widget_search .search-submit {
@@ -923,6 +920,7 @@ a:active {
 	text-decoration: none;
 	border-bottom: none;
 }
+
 .widget_popper_recent_comments .post-icon,
 .widget_popper_recent_posts .post-icon {
     position: absolute;
@@ -1932,13 +1930,11 @@ a:active {
 		left: 0;
 		margin: 0;
 	}
-
-
 }
 
 @media screen and (min-width: 70.75em) {
 	.sidebar-right .entry-meta {
-		left: calc((-100vw + 66.2em) / 2);
+		left: calc((-100vw + 65.3em) / 2);
 	}
 }
 
@@ -1951,7 +1947,6 @@ a:active {
 		right: 0;
 		margin: 0;
 	}
-
 }
 
 @media screen and (min-width: 70.75em) {
