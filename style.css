@@ -421,7 +421,7 @@ blockquote::before {
 	position: absolute;
 	left: -2em;
 	font-family: "icons";
-	content: "\f10d";
+	content: "\e906";
 	color: #ededed;
 }
 
@@ -440,7 +440,7 @@ blockquote::before {
 		right: -2em;
 		bottom: 0;
 		font-family: "icons";
-		content: "\f10e";
+		content: "\e905";
 		color: #ededed;
 	}
 }
@@ -1338,7 +1338,7 @@ a:active {
 }
 
 .dropdown-toggle::after {
-	content: "\f078";
+	content: "\e903";
 	font-size: 14px;
 	line-height: 27px;
 	position: relative;
@@ -1354,7 +1354,7 @@ a:active {
 }
 
 .dropdown-toggle.toggle-on:after {
-	content: "\f077";
+	content: "\e904";
 }
 
 /* Small menu. */
@@ -1586,6 +1586,22 @@ a:active {
 	border-color: #000;
 }
 
+.paging-navigation .prev::before,
+.paging-navigation .next::after {
+	font-family: 'icons';
+	font-size: 75%;
+}
+
+.paging-navigation .prev::before {
+	margin-right: 1em;
+	content: '\e902';
+}
+
+.paging-navigation .next::after {
+	margin-left: 1em;
+	content: '\e901';
+}
+
 .nav-previous {
 	padding-bottom: 1em;
 }
@@ -1663,8 +1679,7 @@ a:active {
 }
 
 .paging-navigation li a {
-	padding: .3em 1em;
-	margin: .4em .2em;
+	padding: .4em 1.2em;
 }
 
 .paging-navigation .current {
@@ -2565,7 +2580,7 @@ img.alignleft {
 	font-family: "icons";
 	font-style: normal;
 	color: #808080;
-	content: "\f148";
+	content: "\e900";
 	transform: rotate(90deg);
 }
 
