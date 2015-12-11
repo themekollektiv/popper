@@ -13,12 +13,12 @@
 	<header class="page-header">
 		<h1 class="page-title">
 			<?php
-			if ( is_404() ) { _e( 'Page not available', 'popper' );
+			if ( is_404() ) { esc_html_e( 'Page not available', 'popper' );
 			} else if ( is_search() ) {
 				/* translators: %s = search query */
-				printf( __( 'Nothing found for &ldquo;%s&rdquo;', 'popper'), '<em>' . get_search_query() . '</em>' );
+				printf( esc_html_e( 'Nothing found for &ldquo;%s&rdquo;', 'popper'), '<em>' . get_search_query() . '</em>' );
 			} else {
-				_e( 'Nothing Found', 'popper' );
+				esc_html_e( 'Nothing Found', 'popper' );
 			}
 			?>
 		</h1>
@@ -33,10 +33,10 @@
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'popper' ); ?></p>
 			<?php get_search_form(); ?>
-			
+
 		<?php elseif ( is_404() ) : ?>
 
-			<p><?php _e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'popper' ); ?></p>
+			<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'popper' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
@@ -46,11 +46,11 @@
 
 		<?php endif; ?>
 	</div><!-- .page-content -->
-	
+
 	<?php
     if ( is_404() || is_search() ) {
     ?>
-		<h1 class="page-title secondary-title"><?php _e( 'Most recent posts:', 'popper' ); ?></h1>
+		<h1 class="page-title secondary-title"><?php esc_html_e( 'Most recent posts:', 'popper' ); ?></h1>
 		<?php
 		// Get the 6 latest posts
 		$args = array(
@@ -67,6 +67,6 @@
 		}
 		/* Restore original Post Data */
 		wp_reset_postdata();
-	} // endif	
+	} // endif
 	?>
 </section><!-- .no-results -->
