@@ -83,10 +83,6 @@
 		// Add dropdown toggle that display child menu items.
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
 
-		// Toggle buttons and submenu items with active children menu items.
-		container.find( '.current-menu-ancestor > button' ).addClass( 'toggle-on' );
-		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
-
 		container.find( '.dropdown-toggle' ).click( function( e ) {
 			var _this = $( this );
 			e.preventDefault();
