@@ -44,3 +44,8 @@ Icons from FontAwesome: Published under various licenses http://fortawesome.gith
 
 === Namesake ===
 Popper is named after philosopher Karl Popper
+
+== Changelog ===
+
+=== 0.9.5 ===
+- Remove JS function that triggers sub-menus to automatically open on single pages.
