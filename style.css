@@ -768,7 +768,7 @@ a:active {
 /* Archive and Categories widgets */
 
 .widget_archive li {
-	color: #808080;
+	color: #7D7D7D;
 }
 
 .widget_categories .children {
@@ -958,7 +958,7 @@ a:active {
 }
 
 .widget_popper_recent_comments .original-title {
-	color: #808080;
+	color: #7D7D7D;
 	font-weight: 500;
 }
 
@@ -994,7 +994,7 @@ a:active {
 	margin: 0 0 .8em;
 	font-size: .7em;
 	text-transform: uppercase;
-	color: #808080;
+	color: #7D7D7D;
 }
 
 .widget_popper_recent_posts a:hover .title,
@@ -2263,7 +2263,7 @@ a:active {
 }
 
 .comment-metadata a {
-	color: #808080;
+	color: #7D7D7D;
 }
 
 .reply {
@@ -2566,7 +2566,7 @@ img.alignleft {
 	display: block;
 	font-family: "icons";
 	font-style: normal;
-	color: #808080;
+	color: #7D7D7D;
 	content: "\e900";
 	transform: rotate(90deg);
 }
