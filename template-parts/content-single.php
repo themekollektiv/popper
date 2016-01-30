@@ -49,7 +49,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
+		<?php the_content(''); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'popper' ),
@@ -63,5 +63,8 @@
 			<footer class="entry-footer">
 				<?php popper_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
-		<?php } ?>
+		<?php } else { 
+			echo popper_modify_read_more_link();
+		}
+?>
 </article><!-- #post-## -->
