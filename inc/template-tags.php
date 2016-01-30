@@ -105,13 +105,13 @@ if ( ! function_exists( 'popper_entry_footer' ) ) :
 function popper_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
+		/* translators: used between category list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'popper' ) );
 		if ( $categories_list && popper_categorized_blog() ) {
 			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'popper' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
-		/* translators: used between list items, there is a space after the comma */
+		/* translators: used between tag list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'popper' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'popper' ) . '</span>', $tags_list ); // WPCS: XSS OK.

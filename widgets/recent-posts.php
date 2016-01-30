@@ -29,11 +29,9 @@ class popper_recent_posts extends WP_Widget {
 
 
 		if (!empty($widget_title)) {
-
 			echo $before_title . $widget_title . $after_title;
-
 		} else {
-			echo $before_title . esc_html( 'Recent Posts', 'popper' ) . $after_title;
+			echo $before_title . esc_html__( 'Recent Posts', 'popper' ) . $after_title;
 		}
 		?>
 

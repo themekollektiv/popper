@@ -43,5 +43,13 @@ Popper is named after philosopher Karl Popper
 
 ## Changelog
 
+### 1.0.0
+- Add Continue Reading link under first post on index page
+- Simplify Continue Reading functionality in code
+- Fix translation problems
+- Add new Norsk Bokmål translation
+- Footer theme reference now points at WordPress.org Theme Directory page
+- Fix contrast in widgets (accessibility improvement)
+
 ### 0.9.5
 - Remove JS function that triggers sub-menus to automatically open on single pages.

@@ -45,22 +45,12 @@ $first_post = $wp_query->current_post == 0 && !is_paged() && is_front_page();
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<?php
-	if ( $first_post == true ) { ?>
-		<div class="entry-content">
-			<?php
-				the_content();
-			?>
-		</div><!-- .entry-content -->
 
-	<?php } else { ?>
+	<div class="entry-content index-excerpt">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-content -->
 
-		<div class="entry-content index-excerpt">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-content -->
+	<?php echo popper_modify_read_more_link(); ?>
 
-		<?php echo popper_modify_read_more_link(); ?>
-
-	<?php } ?>
 
 </article><!-- #post-## -->

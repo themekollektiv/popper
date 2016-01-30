@@ -27,11 +27,9 @@ class popper_recent_comments extends WP_Widget {
 		echo $before_widget;
 
 		if (!empty($widget_title)) {
-
 			echo $before_title . $widget_title . $after_title;
-
 		} else {
-			echo $before_title . esc_html( 'Recent Comments', 'popper' ) . $after_title;
+			echo $before_title . esc_html__( 'Recent Comments', 'popper' ) . $after_title;
 		}
 		?>
 

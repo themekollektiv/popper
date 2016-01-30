@@ -4,31 +4,78 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Popper\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2015-09-30 14:43-0700\n"
+"POT-Creation-Date: 2016-01-30 14:20-0800\n"
+"PO-Revision-Date: 2016-01-30 14:26-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: no_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-09-30 14:56-0700\n"
-"Language-Team: \n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
 "X-Poedit-Basepath: ..\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: no_NO\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:49
+msgid "Comment navigation"
+msgstr "Kommentarnavigasjon"
+
+#: comments.php:52
+msgid "Older Comments"
+msgstr "Eldre kommentarer"
+
+#: comments.php:53
+msgid "Newer Comments"
+msgstr "Nyere kommentarer"
+
+#: comments.php:65
+msgid "Comments are closed."
+msgstr "Kommentarfeltet er stengt."
 
 #: footer.php:18
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
 
-#: functions.php:132
+#: footer.php:18
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Stolt drevet av%s"
+
+#: footer.php:20
+#, php-format
+msgid "Theme: %1$s"
+msgstr "Tema: %1$s"
+
+#: functions.php:48
+msgid "Primary Menu"
+msgstr "Hovedmeny"
+
+#: functions.php:103
+msgid "Widget Area"
+msgstr "Widget-område"
+
+#: functions.php:135
 msgid "expand child menu"
 msgstr "Utvid undermeny"
 
-#: functions.php:133
+#: functions.php:136
 msgid "collapse child menu"
 msgstr "Lukk undermeny"
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "Hopp til innhold"
+
+#: header.php:39
+#, php-format
+msgid "Go to the home page of %1$s"
+msgstr "Gå til startsiden for %1$s"
+
+#: header.php:68
+msgid "Menu"
+msgstr "Meny"
 
 #: image.php:27
 msgid "Featured in: "
@@ -42,7 +89,8 @@ msgstr "Bildet i full størrelse: "
 msgid "Edit attachment post"
 msgstr "Rediger vedleggspost"
 
-#: image.php:50
+#: image.php:50 template-parts/content-page.php:28
+#: template-parts/content-single.php:55
 msgid "Pages:"
 msgstr "Sider:"
 
@@ -74,20 +122,51 @@ msgstr "Sidestolpe til venstre"
 msgid "Right sidebar"
 msgstr "Sidestolpe til høyre"
 
-#: inc/template-tags.php:265
-msgid "&larr; Previous"
-msgstr "&larr; Forrige"
+#: inc/template-tags.php:51 inc/template-tags.php:93 inc/template-tags.php:123
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
 
-#: inc/template-tags.php:266
-msgid "Next &rarr;"
-msgstr "Neste &rarr;"
+#: inc/template-tags.php:51 inc/template-tags.php:93 inc/template-tags.php:123
+msgid "1 Comment"
+msgstr "Én kommentar"
+
+#: inc/template-tags.php:51 inc/template-tags.php:93 inc/template-tags.php:123
+msgid "% Comments"
+msgstr "%  kommentarer"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:109 inc/template-tags.php:115
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:111
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Publisert i %1$s"
+
+#: inc/template-tags.php:117
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Tagget %1$s"
+
+#: inc/template-tags.php:127 template-parts/content-page.php:35
+msgid "Edit"
+msgstr "Rediger"
+
+#: inc/template-tags.php:265 single.php:32
+msgid "Previous"
+msgstr "Forrige"
+
+#: inc/template-tags.php:266 single.php:29
+msgid "Next"
+msgstr "Neste"
 
 #: inc/template-tags.php:274
 msgid "Posts navigation"
 msgstr "Artikkelnavigasjon"
 
 #. translators: %s: Name of current post.
-#: inc/template-tags.php:289 template-parts/content.php:79
+#: inc/template-tags.php:289
 #, php-format
 msgid "Continue reading%s"
 msgstr "Fortsett å lese %s"
@@ -96,17 +175,14 @@ msgstr "Fortsett å lese %s"
 msgid "Attachment post navigation"
 msgstr "Vedleggspostnavigasjon"
 
-#: single.php:29
-msgid "Next"
-msgstr "Neste"
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søkeresultater for: %s"
 
 #: single.php:30
 msgid "Next post:"
 msgstr "Neste artikkel:"
-
-#: single.php:32
-msgid "Previous"
-msgstr "Forrige"
 
 #: single.php:33
 msgid "Previous post:"
@@ -133,6 +209,12 @@ msgid ""
 msgstr ""
 "Klar til å publisere din første artikkel? <a href=\"%1$s\">Start her</a>."
 
+#: template-parts/content-none.php:34
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "Vi fant ingen treff med dine søkeord. Prøv igjen med noen andre."
+
 #: template-parts/content-none.php:39
 msgid ""
 "You seem to be lost. To find what you are looking for check out the most "
@@ -141,49 +223,72 @@ msgstr ""
 "Det ser ut til at du har gått deg vill. For å finne det du leter etter, ta "
 "en titt på de nyeste artiklene våre eller prøv et søk:"
 
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Det kan se ut som at vi ikke finner det du leter etter. Kanskje du skal "
+"prøve et søk."
+
 #: template-parts/content-none.php:53
 msgid "Most recent posts:"
 msgstr "Nyeste artikler:"
-
-#. translators: %s: Name of current post.
-#: template-parts/content.php:54
-#, php-format
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Fortsett å lese %s <span class=\"meta-nav\">&rarr;</span>"
 
 #: widgets/recent-comments.php:12
 msgid "Displays recent comments with user avatar and excerpt."
 msgstr "Viser de nyeste kommentarene med brukerbilde og utdrag."
 
 #: widgets/recent-comments.php:13
+msgid "Enhanced Recent Comments"
+msgstr "Forbedret siste kommentarer"
+
+#: widgets/recent-comments.php:32
 msgid "Recent Comments"
 msgstr "Nyeste kommentarer"
 
-#: widgets/recent-comments.php:64
+#: widgets/recent-comments.php:65
 msgid "on"
 msgstr "på"
 
-#: widgets/recent-comments.php:102 widgets/recent-posts.php:105
+#: widgets/recent-comments.php:103 widgets/recent-posts.php:106
 msgid "Title"
 msgstr "Tittel"
 
-#: widgets/recent-comments.php:107
+#: widgets/recent-comments.php:108
 msgid "Number of comments to display"
 msgstr "Antal kommentarer som vises"
 
-#: widgets/recent-comments.php:109 widgets/recent-posts.php:112
+#: widgets/recent-comments.php:110 widgets/recent-posts.php:113
 msgid "Defaults to 5 if empty"
 msgstr "Settes til 5 hvis nummer ikke er oppgitt"
 
 #: widgets/recent-posts.php:13
-msgid ""
-"Your site&rsquo;s most recent posts with featured image and publishing date."
+msgid "Displays most recent posts with featured image and publishing date."
 msgstr "Viser de nyeste artiklene med hovedbilde og publiseringsdato."
 
 #: widgets/recent-posts.php:14
+msgid "Enhanced Recent Posts"
+msgstr "Forbedret siste innlegg"
+
+#: widgets/recent-posts.php:34
 msgid "Recent Posts"
 msgstr "Nyeste artikler"
 
-#: widgets/recent-posts.php:110
+#: widgets/recent-posts.php:111
 msgid "Number of posts to display"
 msgstr "Antall artikler som skal vises"
+
+#~ msgid "&larr; Previous"
+#~ msgstr "&larr; Forrige"
+
+#~ msgid "Next &rarr;"
+#~ msgstr "Neste &rarr;"
+
+#~ msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Fortsett å lese %s <span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgid ""
+#~ "Your site&rsquo;s most recent posts with featured image and publishing "
+#~ "date."
+#~ msgstr "Viser de nyeste artiklene med hovedbilde og publiseringsdato."
