@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Popper\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-01-30 12:49-0800\n"
+"POT-Creation-Date: 2016-01-30 14:26-0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,9 +13,13 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.6\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_html__\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:49
+msgid "Comment navigation"
+msgstr ""
 
 #: comments.php:52
 msgid "Older Comments"
@@ -23,6 +27,10 @@ msgstr ""
 
 #: comments.php:53
 msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:65
+msgid "Comments are closed."
 msgstr ""
 
 #: footer.php:18
@@ -55,9 +63,17 @@ msgstr ""
 msgid "collapse child menu"
 msgstr ""
 
+#: header.php:25
+msgid "Skip to content"
+msgstr ""
+
 #: header.php:39
 #, php-format
 msgid "Go to the home page of %1$s"
+msgstr ""
+
+#: header.php:68
+msgid "Menu"
 msgstr ""
 
 #: image.php:27
@@ -117,7 +133,8 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
+#. translators: used between category list items, there is a space after the comma
+#. translators: used between tag list items, there is a space after the comma
 #: inc/template-tags.php:109 inc/template-tags.php:115
 msgid ", "
 msgstr ""
@@ -171,9 +188,39 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
+#: template-parts/content-none.php:16
+msgid "Page not available"
+msgstr ""
+
+#. translators: %s = search query
+#: template-parts/content-none.php:19
+#, php-format
+msgid "Nothing found for &ldquo;%s&rdquo;"
+msgstr ""
+
+#: template-parts/content-none.php:21
+msgid "Nothing Found"
+msgstr ""
+
 #: template-parts/content-none.php:30
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:34
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:39
+msgid "You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:"
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/content-none.php:53
+msgid "Most recent posts:"
 msgstr ""
 
 #: widgets/recent-comments.php:12
