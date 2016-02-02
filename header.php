@@ -36,7 +36,7 @@
 			<?php $site_title = get_bloginfo( 'name' ); ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<div class="screen-reader-text">
-					<?php printf( esc_html__('Go to the home page of %1$s', 'popperscores'), $site_title ); ?>
+					<?php printf( esc_html__('Go to the home page of %1$s', 'popper'), $site_title ); ?>
 				</div>
 				<?php if ( has_site_icon() ) : ?>
 					<?php $site_icon = esc_url( get_site_icon_url( 270 ) ); ?>
@@ -65,7 +65,7 @@
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'popperscores' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'popper' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 		<?php endif; ?>
