@@ -38,7 +38,7 @@ function popper_setup() {
 	/*
 	 * Add new image sizes and theme support for Custom Logo
 	 */
-	add_image_size( 'popper-logo', 270, 270 );
+	add_image_size( 'popper-logo', 96, 96, true );
 	add_theme_support( 'custom-logo', array(
    		'size' => 'popper-logo',
 		)

@@ -386,3 +386,16 @@ function popper_the_attached_image() {
 	);
 }
 endif;
+
+
+/* Custom Logo loop */
+function popper_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+		return get_custom_logo();
+	} elseif ( has_site_icon() ) {
+		$site_logo_image = esc_url( get_site_icon_url( 270 ) );
+		return '<img class="site-icon" src="' . $site_logo_image . '" alt="" >';
+	} else {
+		return false;
+	}
+}
