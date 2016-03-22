@@ -38,11 +38,12 @@ function popper_setup() {
 	/*
 	 * Add new image sizes and theme support for Custom Logo
 	 */
-	add_image_size( 'popper-logo', 96, 96, true );
-	add_theme_support( 'custom-logo', array(
-   		'size' => 'popper-logo',
-		)
-	);
+	 add_theme_support( 'custom-logo', array(
+        'height'      => 96,
+        'width'       => 96,
+        'flex-height' => true,
+        'flex-width'  => true,
+ 	) );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
