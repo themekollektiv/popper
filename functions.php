@@ -41,8 +41,8 @@ function popper_setup() {
 	 add_theme_support( 'custom-logo', array(
         'height'      => 96,
         'width'       => 96,
-        'flex-height' => true,
-        'flex-width'  => true,
+        'flex-height' => false,
+        'flex-width'  => false,
  	) );
 
 	/*
