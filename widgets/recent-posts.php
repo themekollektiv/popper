@@ -124,7 +124,7 @@ register_widget('popper_recent_posts');
 
 /*
 function popper_posts_widget_registration() {
-  unregister_widget('WP_Widget_Recent_Postss');
+  unregister_widget('WP_Widget_Recent_Posts');
   register_widget('popper_recent_posts');
 }
 add_action('widgets_init', 'popper_posts_widget_registration');
