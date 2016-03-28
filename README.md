@@ -9,7 +9,7 @@ To display an article deck (short one-paragraph synopsis displayed after post ti
 ### Customizer Options
 Extended options available from the Customizer:
 
-1. Site Icon displays as logo in top-right corner
+1. Optional Logo in top-right corner
 2. Header background color
 3. Header text color
 4. Optional Header image
@@ -42,6 +42,10 @@ Icons from FontAwesome: Published under various licenses http://fortawesome.gith
 Popper is named after philosopher Karl Popper
 
 ## Changelog
+
+### 1.0.1
+- Add Logo support to coincide with release of WordPress 4.5
+- Remove Site Icon as logo in above
 
 ### 1.0.0
 - Add Continue Reading link under first post on index page
