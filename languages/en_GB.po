@@ -1,0 +1,283 @@
+# Copyright (C) 2015 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Popper\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2016-02-02 00:16-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-02-02 00:25-0700\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"Last-Translator: Eric Carlson\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_GB\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:49
+msgid "Comment navigation"
+msgstr "Comment navigation"
+
+#: comments.php:52
+msgid "Older Comments"
+msgstr "Older Comments"
+
+#: comments.php:53
+msgid "Newer Comments"
+msgstr "Newer Comments"
+
+#: comments.php:65
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#: footer.php:18
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: footer.php:18
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#: footer.php:20
+#, php-format
+msgid "Theme: %1$s"
+msgstr "Theme: %1$s"
+
+#: functions.php:48
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+#: functions.php:103
+msgid "Widget Area"
+msgstr "Widget Area"
+
+#: functions.php:135
+msgid "expand child menu"
+msgstr "expand child menu"
+
+#: functions.php:136
+msgid "collapse child menu"
+msgstr "collapse child menu"
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: header.php:39
+#, php-format
+msgid "Go to the home page of %1$s"
+msgstr "Go to the home page of %1$s"
+
+#: header.php:68
+msgid "Menu"
+msgstr "Menu"
+
+#: image.php:27
+msgid "Featured in: "
+msgstr "Featured in: "
+
+#: image.php:28
+msgid "Full size image: "
+msgstr "Full size image: "
+
+#: image.php:29
+msgid "Edit attachment post"
+msgstr "Edit attachment post"
+
+#: image.php:50 template-parts/content-page.php:28
+#: template-parts/content-single.php:55
+msgid "Pages:"
+msgstr "Pages:"
+
+#: inc/customizer.php:35
+msgid "Header Background Color"
+msgstr "Header Background Colour"
+
+#: inc/customizer.php:46
+msgid "Theme Options"
+msgstr "Theme Options"
+
+#: inc/customizer.php:49
+msgid "Change the default display options for the theme."
+msgstr "Change the default display options for the theme."
+
+#: inc/customizer.php:67
+msgid "Sidebar position"
+msgstr "Sidebar position"
+
+#: inc/customizer.php:70
+msgid "No sidebar (default)"
+msgstr "No sidebar (default)"
+
+#: inc/customizer.php:71
+msgid "Left sidebar"
+msgstr "Left sidebar"
+
+#: inc/customizer.php:72
+msgid "Right sidebar"
+msgstr "Right sidebar"
+
+#: inc/template-tags.php:51 inc/template-tags.php:93 inc/template-tags.php:123
+msgid "Leave a comment"
+msgstr "Leave a comment"
+
+#: inc/template-tags.php:51 inc/template-tags.php:93 inc/template-tags.php:123
+msgid "1 Comment"
+msgstr "1 Comment"
+
+#: inc/template-tags.php:51 inc/template-tags.php:93 inc/template-tags.php:123
+msgid "% Comments"
+msgstr "% Comments"
+
+#. translators: used between category list items, there is a space after the comma
+#. translators: used between tag list items, there is a space after the comma
+#: inc/template-tags.php:109 inc/template-tags.php:115
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:111
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Posted in %1$s"
+
+#: inc/template-tags.php:117
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Tagged %1$s"
+
+#: inc/template-tags.php:127 template-parts/content-page.php:35
+msgid "Edit"
+msgstr "Edit"
+
+#: inc/template-tags.php:265 single.php:32
+msgid "Previous"
+msgstr "Previous"
+
+#: inc/template-tags.php:266 single.php:29
+msgid "Next"
+msgstr "Next"
+
+#: inc/template-tags.php:274
+msgid "Posts navigation"
+msgstr "Posts navigation"
+
+#. translators: %s: Name of current post.
+#: inc/template-tags.php:289
+#, php-format
+msgid "Continue reading%s"
+msgstr "Continue reading%s"
+
+#: inc/template-tags.php:319
+msgid "Attachment post navigation"
+msgstr "Attachment post navigation"
+
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Search Results for: %s"
+
+#: single.php:30
+msgid "Next post:"
+msgstr "Next post:"
+
+#: single.php:33
+msgid "Previous post:"
+msgstr "Previous post:"
+
+#: template-parts/content-none.php:16
+msgid "Page not available"
+msgstr "Page not available"
+
+#. translators: %s = search query
+#: template-parts/content-none.php:19
+#, php-format
+msgid "Nothing found for &ldquo;%s&rdquo;"
+msgstr "Nothing found for &lsquo;%s&rsquo;"
+
+#: template-parts/content-none.php:21
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#: template-parts/content-none.php:30
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+
+#: template-parts/content-none.php:34
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+
+#: template-parts/content-none.php:39
+msgid ""
+"You seem to be lost. To find what you are looking for check out the most "
+"recent articles below or try a search:"
+msgstr ""
+"You seem to be lost. To find what you are looking for check out the most "
+"recent articles below or try a search:"
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+
+#: template-parts/content-none.php:53
+msgid "Most recent posts:"
+msgstr "Most recent posts:"
+
+#: widgets/recent-comments.php:12
+msgid "Displays recent comments with user avatar and excerpt."
+msgstr "Displays recent comments with user avatar and excerpt."
+
+#: widgets/recent-comments.php:13
+msgid "Enhanced Recent Comments"
+msgstr "Enhanced Recent Comments"
+
+#: widgets/recent-comments.php:32
+msgid "Recent Comments"
+msgstr "Recent Comments"
+
+#: widgets/recent-comments.php:65
+msgid "on"
+msgstr "on"
+
+#: widgets/recent-comments.php:103 widgets/recent-posts.php:106
+msgid "Title"
+msgstr "Title"
+
+#: widgets/recent-comments.php:108
+msgid "Number of comments to display"
+msgstr "Number of comments to display"
+
+#: widgets/recent-comments.php:110 widgets/recent-posts.php:113
+msgid "Defaults to 5 if empty"
+msgstr "Defaults to 5 if empty"
+
+#: widgets/recent-posts.php:13
+msgid "Displays most recent posts with featured image and publishing date."
+msgstr "Displays most recent posts with featured image and publishing date."
+
+#: widgets/recent-posts.php:14
+msgid "Enhanced Recent Posts"
+msgstr "Enhanced Recent Posts"
+
+#: widgets/recent-posts.php:34
+msgid "Recent Posts"
+msgstr "Recent Posts"
+
+#: widgets/recent-posts.php:111
+msgid "Number of posts to display"
+msgstr "Number of posts to display"
