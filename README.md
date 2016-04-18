@@ -43,6 +43,9 @@ Popper is named after philosopher Karl Popper
 
 ## Changelog
 
+### 1.0.2
+- Display full header on front page and full first post on blog page when front page is set to static page
+
 ### 1.0.1
 - Add Logo support to coincide with release of WordPress 4.5
 - Remove Site Icon as logo in above
