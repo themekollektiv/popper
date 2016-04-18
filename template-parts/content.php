@@ -11,7 +11,7 @@
 
 <?php
 // Is this the first post of the front page?
-$first_post = $wp_query->current_post == 0 && !is_paged() && is_front_page();
+$first_post = $wp_query->current_post == 0 && !is_paged() && is_home();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
