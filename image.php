@@ -59,9 +59,8 @@ get_header(); ?>
 						?>
 					</div><!-- .entry-content -->
 
-					<?php popper_attachment_nav(); ?>
+					<?php popper_attachment_nav();
 
-					<?php
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || 0 !== (int) get_comments_number() ) :
 						comments_template();
@@ -74,5 +73,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();
+?>
