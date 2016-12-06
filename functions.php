@@ -166,6 +166,20 @@ function popper_scripts() {
 	) );
 }
 
+add_action( 'style_loader_tag', 'popper_custom_attributes' );
+/**
+ * Change tag of styles. Add custom attributes for preload fonts.
+ *
+ * @param $tag
+ *
+ * @return mixed
+ */
+function popper_custom_attributes( $tag ) {
+
+	$tag = str_replace( 'id=\'popper-google-fonts-css\'', 'id=\'popper-google-fonts-css\' rel=\'preload\'', $tag );
+	return $tag;
+}
+
 /**
  * Implement the Custom Header feature.
  */
