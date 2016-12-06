@@ -35,7 +35,7 @@ get_header(); ?>
 					<div class="entry-content">
 						<div class="entry-attachment">
 							<figure class="image-attachment centered-image<?php if ( has_excerpt() ) {
-								echo " alignnone wp-caption";
+								echo ' alignnone wp-caption';
 							} ?>">
 								<?php popper_the_attached_image(); ?>
 								<?php if ( has_excerpt() ) : ?>
