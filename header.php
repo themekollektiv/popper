@@ -44,7 +44,7 @@
 						echo popper_custom_logo();
 					} else { ?>
 						<div class="site-firstletter" aria-hidden="true">
-							<?php echo substr( $site_title, 0, 1 ); ?>
+							<?php echo $site_title[0]; ?>
 						</div>
 					<?php } ?>
 				</a>
