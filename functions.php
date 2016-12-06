@@ -8,7 +8,7 @@
  */
 
 add_action( 'after_setup_theme', 'popper_setup' );
-if ( ! function_exists( 'popper_setup' ) ) :
+if ( ! function_exists( 'popper_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -94,7 +94,7 @@ if ( ! function_exists( 'popper_setup' ) ) :
 			'/icons/style.css'
 		) );
 	}
-endif; // popper_setup
+} // end if, popper_setup
 
 add_action( 'after_setup_theme', 'popper_content_width', 0 );
 /**
