@@ -24,11 +24,13 @@ get_header(); ?>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 
 						<div class="entry-meta">
-							<?php _e( 'Featured in: ', 'popper' ); ?>
+							<?php esc_attr_e( 'Featured in: ', 'popper' ); ?>
 							<span class="parent-post-link"><a href="<?php echo get_permalink( $post->post_parent ); ?>" rel="gallery"><?php echo get_the_title( $post->post_parent ); ?></a></span>.
-							<?php _e( 'Full size image: ', 'popper' ); ?>
+							<?php esc_attr_e( 'Full size image: ', 'popper' ); ?>
 							<span class="full-size-link"><a href="<?php echo wp_get_attachment_url(); ?>"><?php echo $metadata[ 'width' ]; ?> &times; <?php echo $metadata[ 'height' ]; ?></a></span>.
-							<?php edit_post_link( __( 'Edit attachment post', 'popper' ), '<span class="edit-link">', '</span>.' ); ?>
+							<?php edit_post_link(
+								esc_attr__( 'Edit attachment post', 'popper' ), '<span class="edit-link">', '</span>.'
+							); ?>
 						</div><!-- .entry-meta -->
 					</header><!-- .entry-header -->
 
@@ -51,7 +53,8 @@ get_header(); ?>
 						<?php
 						the_content();
 						wp_link_pages( array(
-							'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'popper' ) . '</span>',
+							'before'      => '<div class="page-links"><span class="page-links-title">'
+											 . esc_attr__( 'Pages:', 'popper' ) . '</span>',
 							'after'       => '</div>',
 							'link_before' => '<span>',
 							'link_after'  => '</span>',
