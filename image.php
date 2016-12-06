@@ -4,6 +4,8 @@
  *
  * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/#attachment
  *
+ * @var     \WP_Post $post
+ *
  * @package popper
  */
 
@@ -54,7 +56,7 @@ get_header(); ?>
 						the_content();
 						wp_link_pages( array(
 							'before'      => '<div class="page-links"><span class="page-links-title">'
-											 . esc_attr__( 'Pages:', 'popper' ) . '</span>',
+							                 . esc_attr__( 'Pages:', 'popper' ) . '</span>',
 							'after'       => '</div>',
 							'link_before' => '<span>',
 							'link_after'  => '</span>',
