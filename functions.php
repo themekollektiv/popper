@@ -7,6 +7,7 @@
  * @package popper
  */
 
+add_action( 'after_setup_theme', 'popper_setup' );
 if ( ! function_exists( 'popper_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -94,8 +95,8 @@ if ( ! function_exists( 'popper_setup' ) ) :
 		) );
 	}
 endif; // popper_setup
-add_action( 'after_setup_theme', 'popper_setup' );
 
+add_action( 'after_setup_theme', 'popper_content_width', 0 );
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -108,8 +109,7 @@ function popper_content_width() {
 	$GLOBALS[ 'content_width' ] = apply_filters( 'popper_content_width', 702 );
 }
 
-add_action( 'after_setup_theme', 'popper_content_width', 0 );
-
+add_action( 'widgets_init', 'popper_widgets_init' );
 /**
  * Register widget area.
  *
@@ -128,8 +128,7 @@ function popper_widgets_init() {
 	) );
 }
 
-add_action( 'widgets_init', 'popper_widgets_init' );
-
+add_action( 'wp_enqueue_scripts', 'popper_scripts' );
 /**
  * Enqueue scripts and styles.
  */
@@ -156,8 +155,6 @@ function popper_scripts() {
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'popper' ) . '</span>',
 	) );
 }
-
-add_action( 'wp_enqueue_scripts', 'popper_scripts' );
 
 /**
  * Implement the Custom Header feature.
