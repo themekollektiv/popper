@@ -55,11 +55,13 @@
 			} ?>">
 				<?php if ( is_front_page() && is_home() ) : ?>
 					<h1 class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php
+							bloginfo( 'name' ); ?></a>
 					</h1>
 				<?php else : ?>
 					<p class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php
+							bloginfo( 'name' ); ?></a>
 					</p>
 				<?php endif; ?>
 				<?php
@@ -72,7 +74,8 @@
 
 			<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'popper' ); ?></button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php
+						esc_html_e( 'Menu', 'popper' ); ?></button>
 					<?php wp_nav_menu( array(
 						'theme_location' => 'primary',
 						'menu_id'        => 'primary-menu',
