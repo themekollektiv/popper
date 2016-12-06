@@ -161,8 +161,8 @@ function popper_scripts() {
 	}
 
 	wp_localize_script( 'popper-functions', 'screenReaderText', array(
-		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'popper' ) . '</span>',
-		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'popper' ) . '</span>',
+		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'popper' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'popper' ) . '</span>',
 	) );
 }
 
