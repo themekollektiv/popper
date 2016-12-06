@@ -21,10 +21,8 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
+			<?php /* Start the Loop */
+			while ( have_posts() ) : the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -32,20 +30,21 @@ get_header(); ?>
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
-				?>
 
-			<?php endwhile; ?>
+			endwhile;
 
-			<?php popper_paging_nav(); ?>
+			popper_paging_nav();
 
-		<?php else : ?>
+		else :
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			get_template_part( 'template-parts/content', 'none' );
 
-		<?php endif; ?>
+		endif; ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();
+?>
