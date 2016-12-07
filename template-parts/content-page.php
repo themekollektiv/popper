@@ -16,13 +16,11 @@
 				<?php the_post_thumbnail( 'popper-featured-image' ); ?>
 			</figure>
 		<?php }
-		?>
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
+		<?php the_content();
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'popper' ),
 			'after'  => '</div>',
