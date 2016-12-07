@@ -7,6 +7,7 @@
  * @package popper
  */
 
+add_filter( 'body_class', 'popper_body_classes' );
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -23,5 +24,3 @@ function popper_body_classes( $classes ) {
 
 	return $classes;
 }
-
-add_filter( 'body_class', 'popper_body_classes' );
