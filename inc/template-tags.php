@@ -181,6 +181,8 @@ function popper_categorized_blog() {
 	return $all_the_cool_cats > 1;
 }
 
+add_action( 'edit_category', 'popper_category_transient_flusher' );
+add_action( 'save_post', 'popper_category_transient_flusher' );
 /**
  * Flush out the transients used in popper_categorized_blog.
  */
@@ -192,9 +194,6 @@ function popper_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'popper_categories' );
 }
-
-add_action( 'edit_category', 'popper_category_transient_flusher' );
-add_action( 'save_post', 'popper_category_transient_flusher' );
 
 /**
  * Utility function to check if a gravatar exists for a given email or id
@@ -313,11 +312,20 @@ if ( ! function_exists( 'popper_paging_nav' ) ) {
  * Customize Read More link
  */
 
+add_filter( 'the_content_more_link', 'popper_modify_read_more_link' );
+/**
+ * Change the default read more link.
+ *
+ * @return string
+ */
 function popper_modify_read_more_link() {
 
 	$read_more_link   = sprintf(
-	/* translators: %s: Name of current post. */
-		wp_kses( __( 'Continue reading%s', 'popper' ), array( 'span' => array( 'class' => array() ) ) ),
+		/* translators: %s: Name of current post. */
+		wp_kses(
+			esc_html__( 'Continue reading%s', 'popper' ),
+			array( 'span' => array( 'class' => array() ) )
+		),
 		the_title( ' <span class="screen-reader-text">"', '"</span>', false )
 	);
 	$read_more_string =
@@ -328,18 +336,16 @@ function popper_modify_read_more_link() {
 	return $read_more_string;
 }
 
-add_filter( 'the_content_more_link', 'popper_modify_read_more_link' );
-
+add_filter( 'excerpt_more', 'popper_excerpt_more' );
 /**
- * Customize ellipsis at end of excerpts
+ * Customize ellipsis at end of excerpts.
+ *
+ * @return string
  */
 function popper_excerpt_more() {
 
-	return '…';
+	return esc_html__( '…', 'popper' );
 }
-
-add_filter( 'excerpt_more', 'popper_excerpt_more' );
-
 
 if ( ! function_exists( 'popper_attachment_nav' ) ) {
 	/**
