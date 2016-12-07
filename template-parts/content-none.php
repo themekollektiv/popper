@@ -2,21 +2,25 @@
 /**
  * Template part for displaying a message that posts cannot be found.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link    https://codex.wordpress.org/Template_Hierarchy
  *
  * @package popper
  */
-
 ?>
 
-<section class="<?php if ( is_404() ) { echo 'error-404'; } else { echo 'no-results'; } ?> not-found">
+<section class="<?php if ( is_404() ) {
+	echo 'error-404';
+} else {
+	echo 'no-results';
+} ?> not-found">
 	<header class="page-header">
 		<h1 class="page-title">
 			<?php
-			if ( is_404() ) { esc_html_e( 'Page not available', 'popper' );
+			if ( is_404() ) {
+				esc_html_e( 'Page not available', 'popper' );
 			} else if ( is_search() ) {
 				/* translators: %s = search query */
-				printf( esc_html_e( 'Nothing found for &ldquo;%s&rdquo;', 'popper'), '<em>' . get_search_query() . '</em>' );
+				printf( esc_html_e( 'Nothing found for &ldquo;%s&rdquo;', 'popper' ), '<em>' . get_search_query() . '</em>' );
 			} else {
 				esc_html_e( 'Nothing Found', 'popper' );
 			}
@@ -48,22 +52,22 @@
 	</div><!-- .page-content -->
 
 	<?php
-    if ( is_404() || is_search() ) {
-    ?>
+	if ( is_404() || is_search() ) {
+		?>
 		<h1 class="page-title secondary-title"><?php esc_html_e( 'Most recent posts:', 'popper' ); ?></h1>
 		<?php
 		// Get the 6 latest posts
-		$args = array(
+		$args               = array(
 			'posts_per_page' => 6
 		);
 		$latest_posts_query = new WP_Query( $args );
 		// The Loop
 		if ( $latest_posts_query->have_posts() ) {
-				while ( $latest_posts_query->have_posts() ) {
-					$latest_posts_query->the_post();
-					// Get the standard index page content
-					get_template_part( 'template-parts/content', get_post_format() );
-				}
+			while ( $latest_posts_query->have_posts() ) {
+				$latest_posts_query->the_post();
+				// Get the standard index page content
+				get_template_part( 'template-parts/content', get_post_format() );
+			}
 		}
 		/* Restore original Post Data */
 		wp_reset_postdata();
