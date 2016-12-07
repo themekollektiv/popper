@@ -20,7 +20,10 @@
 				esc_html_e( 'Page not available', 'popper' );
 			} else if ( is_search() ) {
 				/* translators: %s = search query */
-				printf( esc_html_e( 'Nothing found for &ldquo;%s&rdquo;', 'popper' ), '<em>' . get_search_query() . '</em>' );
+				printf(
+					esc_html_e( 'Nothing found for &ldquo;%s&rdquo;', 'popper' ),
+					'<em>' . get_search_query() . '</em>'
+				);
 			} else {
 				esc_html_e( 'Nothing Found', 'popper' );
 			}
