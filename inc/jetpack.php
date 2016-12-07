@@ -7,6 +7,7 @@
  * @package popper
  */
 
+add_action( 'after_setup_theme', 'popper_jetpack_setup' );
 /**
  * Add theme support for Infinite Scroll.
  * See: https://jetpack.me/support/infinite-scroll/
@@ -19,7 +20,7 @@ function popper_jetpack_setup() {
 		'footer'    => 'page',
 	) );
 } // end function popper_jetpack_setup
-add_action( 'after_setup_theme', 'popper_jetpack_setup' );
+
 
 /**
  * Custom render function for Infinite Scroll.
