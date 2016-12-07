@@ -2298,7 +2298,7 @@ a:active {
 	word-wrap: break-word;
 }
 
-.bypostauthor .avatar {
+.bypostauthor > .comment-body .avatar {
 	box-sizing: content-box;
 	border: 5px solid #c3c3c3;
 	margin-top: -5px;
