@@ -63,7 +63,7 @@
 		$args               = array(
 			'posts_per_page' => 6
 		);
-		$latest_posts_query = new WP_Query( $args );
+		$latest_posts_query = new \WP_Query( $args );
 		// The Loop
 		if ( $latest_posts_query->have_posts() ) {
 			while ( $latest_posts_query->have_posts() ) {
