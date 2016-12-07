@@ -55,7 +55,7 @@
 			<p><?php esc_html_e(
 					'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:',
 					'popper'
-				; ?></p>
+				); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
