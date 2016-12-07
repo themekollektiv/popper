@@ -7,7 +7,7 @@
  * @package popper
  */
 
-if ( ! function_exists( 'popper_posted_on' ) ) :
+if ( ! function_exists( 'popper_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
@@ -17,7 +17,8 @@ if ( ! function_exists( 'popper_posted_on' ) ) :
 
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>'
+			               . '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf( $time_string,
@@ -34,10 +35,12 @@ if ( ! function_exists( 'popper_posted_on' ) ) :
 
 		$byline = sprintf(
 			esc_html_x( 'by %s', 'post author', 'popper' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			'<span class="author vcard"><a class="url fn n" href="'
+			. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">'
+			. esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		// Display author avatar if author has a Gravatar
+		// Display author avatar if author has a Gravatar.
 		if ( validate_gravatar( $author_id ) ) {
 			echo '<div class="meta-content has-avatar">';
 			echo '<div class="author-avatar">' . get_avatar( $author_id ) . '</div>';
@@ -45,18 +48,24 @@ if ( ! function_exists( 'popper_posted_on' ) ) :
 			echo '<div class="meta-content">';
 		}
 
-		echo '<span class="byline">' . $byline . ' </span><span class="posted-on">' . $posted_on . ' </span>'; // WPCS: XSS OK.
+		echo '<span class="byline">' . $byline . ' </span>';
+		echo '<span class="posted-on">' . $posted_on . ' </span>'; // WPCS: XSS OK.
+
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'popper' ), esc_html__( '1 Comment', 'popper' ), esc_html__( '% Comments', 'popper' ) );
+			comments_popup_link(
+				esc_html__( 'Leave a comment', 'popper' ),
+				esc_html__( '1 Comment', 'popper' ),
+				esc_html__( '% Comments', 'popper' )
+			);
 			echo '</span>';
 		}
 		echo '</div><!-- .meta-content -->';
 
 	}
-endif;
+}
 
-if ( ! function_exists( 'popper_index_posted_on' ) ) :
+if ( ! function_exists( 'popper_index_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for post-date/time and author on index pages.
 	 */
@@ -87,18 +96,24 @@ if ( ! function_exists( 'popper_index_posted_on' ) ) :
 		);
 
 		echo '<div class="meta-content">';
-		echo '<span class="byline">' . $byline . ' </span><span class="posted-on">' . $posted_on . ' </span>'; // WPCS: XSS OK.
+		echo '<span class="byline">' . $byline . ' </span>';
+		echo '<span class="posted-on">' . $posted_on . ' </span>'; // WPCS: XSS OK.
+
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'popper' ), esc_html__( '1 Comment', 'popper' ), esc_html__( '% Comments', 'popper' ) );
+			comments_popup_link(
+				esc_html__( 'Leave a comment', 'popper' ),
+				esc_html__( '1 Comment', 'popper' ),
+				esc_html__( '% Comments', 'popper' )
+			);
 			echo '</span>';
 		}
 		echo '</div><!-- .meta-content -->';
 
 	}
-endif;
+}
 
-if ( ! function_exists( 'popper_entry_footer' ) ) :
+if ( ! function_exists( 'popper_entry_footer' ) ) {
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
@@ -115,19 +130,26 @@ if ( ! function_exists( 'popper_entry_footer' ) ) :
 			/* translators: used between tag list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'popper' ) );
 			if ( $tags_list ) {
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'popper' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf(
+					'<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'popper' ) . '</span>',
+					$tags_list
+				); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'popper' ), esc_html__( '1 Comment', 'popper' ), esc_html__( '% Comments', 'popper' ) );
+			comments_popup_link(
+				esc_html__( 'Leave a comment', 'popper' ),
+				esc_html__( '1 Comment', 'popper' ),
+				esc_html__( '% Comments', 'popper' )
+			);
 			echo '</span>';
 		}
 
 		edit_post_link( esc_html__( 'Edit', 'popper' ), '<span class="edit-link">', '</span>' );
 	}
-endif;
+}
 
 /**
  * Returns true if a blog has more than 1 category.
@@ -198,7 +220,10 @@ function validate_gravatar( $id_or_email ) {
 	} elseif ( is_object( $id_or_email ) ) {
 		// No avatar for pingbacks or trackbacks
 		$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
-		if ( ! empty( $id_or_email->comment_type ) && ! in_array( $id_or_email->comment_type, (array) $allowed_comment_types ) ) {
+		if (
+			! empty( $id_or_email->comment_type ) &&
+			! in_array( $id_or_email->comment_type, (array) $allowed_comment_types )
+		) {
 			return false;
 		}
 
@@ -227,9 +252,9 @@ function validate_gravatar( $id_or_email ) {
 			$data = $response[ 'response' ][ 'code' ];
 		}
 		wp_cache_set( $hashkey, $data, $group = '', $expire = 60 * 5 );
-
 	}
-	if ( $data == '200' ) {
+
+	if ( $data === '200' ) {
 		return true;
 	} else {
 		return false;
@@ -237,12 +262,11 @@ function validate_gravatar( $id_or_email ) {
 }
 
 
-if ( ! function_exists( 'popper_paging_nav' ) ) :
+if ( ! function_exists( 'popper_paging_nav' ) ) {
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
 	 * Based on paging nav function from Twenty Fourteen
 	 */
-
 	function popper_paging_nav() {
 
 		// Don't print empty markup if there's only one page.
@@ -273,8 +297,8 @@ if ( ! function_exists( 'popper_paging_nav' ) ) :
 			'current'   => $paged,
 			'mid_size'  => 1,
 			'add_args'  => array_map( 'urlencode', $query_args ),
-			'prev_text' => __( 'Previous', 'popper' ),
-			'next_text' => __( 'Next', 'popper' ),
+			'prev_text' => esc_html__( 'Previous', 'popper' ),
+			'next_text' => esc_html__( 'Next', 'popper' ),
 			'type'      => 'list',
 		) );
 
@@ -282,13 +306,13 @@ if ( ! function_exists( 'popper_paging_nav' ) ) :
 
 			?>
 			<nav class="navigation paging-navigation" role="navigation">
-				<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'popper' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'popper' ); ?></h1>
 				<?php echo $links; ?>
 			</nav><!-- .navigation -->
 			<?php
 		endif;
 	}
-endif;
+}
 
 /**
  * Customize Read More link
@@ -314,15 +338,15 @@ add_filter( 'the_content_more_link', 'popper_modify_read_more_link' );
 /**
  * Customize ellipsis at end of excerpts
  */
-function popper_excerpt_more( $more ) {
+function popper_excerpt_more() {
 
-	return "…";
+	return '…';
 }
 
 add_filter( 'excerpt_more', 'popper_excerpt_more' );
 
 
-if ( ! function_exists( 'popper_attachment_nav' ) ) :
+if ( ! function_exists( 'popper_attachment_nav' ) ) {
 	/**
 	 * Display navigation to next/previous image in attachment pages.
 	 */
@@ -331,26 +355,28 @@ if ( ! function_exists( 'popper_attachment_nav' ) ) :
 		?>
 		<nav class="navigation post-navigation" role="navigation">
 			<div class="post-nav-box clear">
-				<h1 class="screen-reader-text"><?php _e( 'Attachment post navigation', 'popper' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Attachment post navigation', 'popper' ); ?></h1>
 				<div class="nav-links">
 					<div class="nav-previous">
-						<?php previous_image_link( false, '<span class="post-title">Previous image</span>' ); ?>
+						<?php previous_image_link(
+							false,
+							'<span class="post-title">' . esc_html__( 'Previous image', 'popper' ) . '</span>'
+						); ?>
 					</div>
 					<div class="nav-next">
-						<?php next_image_link( false, '<span class="post-title">Next image</span>' ); ?>
+						<?php next_image_link(
+							false,
+							'<span class="post-title">' . esc_html__( 'Next image', 'popper' ) . '</span>'
+						); ?>
 					</div>
 				</div><!-- .nav-links -->
-
-
 			</div>
 		</nav>
-
-
 		<?php
 	}
-endif;
+}
 
-if ( ! function_exists( 'popper_the_attached_image' ) ) :
+if ( ! function_exists( 'popper_the_attached_image' ) ) {
 	/**
 	 * Print the attached image with a link to the next attached image.
 	 * Appropriated from Twenty Fourteen 1.0
@@ -381,8 +407,10 @@ if ( ! function_exists( 'popper_the_attached_image' ) ) :
 		) );
 		// If there is more than 1 attachment in a gallery...
 		if ( count( $attachment_ids ) > 1 ) {
+
+			$next_id = false;
 			foreach ( $attachment_ids as $attachment_id ) {
-				if ( $attachment_id == $post->ID ) {
+				if ( $attachment_id === $post->ID ) {
 					$next_id = current( $attachment_ids );
 					break;
 				}
@@ -400,10 +428,12 @@ if ( ! function_exists( 'popper_the_attached_image' ) ) :
 			wp_get_attachment_image( $post->ID, $attachment_size )
 		);
 	}
-endif;
+}
 
 
-/* Test if WordPress version and whether a logo has been defined */
+/**
+ * Test if WordPress version and whether a logo has been defined
+ */
 function popper_custom_logo() {
 
 	if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
@@ -420,8 +450,7 @@ function popper_custom_logo() {
  */
 function popper_is_first_post() {
 
-	global $wp_query;
-	$status = $wp_query->current_post === 0 && ! is_paged() && is_home();
+	$status = $GLOBALS[ 'wp_query' ]->current_post === 0 && ! is_paged() && is_home();
 
 	return (bool) $status;
 }
