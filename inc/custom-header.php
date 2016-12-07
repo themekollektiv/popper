@@ -5,10 +5,10 @@
  * You can add an optional custom header image to header.php like so ...
  *
  * <?php if ( get_header_image() ) : ?>
- * <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
- * <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo
- * esc_attr( get_custom_header()->height ); ?>" alt="">
- * </a>
+ * 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+ * 		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo
+ * 		esc_attr( get_custom_header()->height ); ?>" alt="">
+ * 	</a>
  * <?php endif; // End header image check. ?>
  *
  * @link    http://codex.wordpress.org/Custom_Headers
@@ -38,8 +38,7 @@ function popper_custom_header_setup() {
 }
 
 add_action( 'after_setup_theme', 'popper_custom_header_setup' );
-
-if ( ! function_exists( 'popper_header_style' ) ) :
+if ( ! function_exists( 'popper_header_style' ) ) {
 	/**
 	 * Styles the header image and text displayed on the blog
 	 *
@@ -60,7 +59,7 @@ if ( ! function_exists( 'popper_header_style' ) ) :
 		<style type="text/css">
 			<?php
 				// Has the text been hidden?
-				if ( 'blank' === $header_text_color ) :
+				if ( 'blank' === $header_text_color ) {
 			?>
 			.site-title,
 			.site-description {
@@ -70,7 +69,7 @@ if ( ! function_exists( 'popper_header_style' ) ) :
 
 			<?php
 				// If the user has set a custom color for the text use that.
-				else :
+				} else {
 			?>
 			.site-title a,
 			.site-description {
@@ -81,13 +80,13 @@ if ( ! function_exists( 'popper_header_style' ) ) :
 				border-color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 
-			<?php endif; ?>
+			<?php } ?>
 		</style>
 		<?php
 	}
-endif; // popper_header_style
+} // popper_header_style
 
-if ( ! function_exists( 'popper_admin_header_style' ) ) :
+if ( ! function_exists( 'popper_admin_header_style' ) ) {
 	/**
 	 * Styles the header image displayed on the Appearance > Header admin panel.
 	 *
@@ -119,9 +118,9 @@ if ( ! function_exists( 'popper_admin_header_style' ) ) :
 		</style>
 		<?php
 	}
-endif; // popper_admin_header_style
+} // popper_admin_header_style
 
-if ( ! function_exists( 'popper_admin_header_image' ) ) :
+if ( ! function_exists( 'popper_admin_header_image' ) ) {
 	/**
 	 * Custom header image markup displayed on the Appearance > Header admin panel.
 	 *
@@ -132,13 +131,14 @@ if ( ! function_exists( 'popper_admin_header_image' ) ) :
 		?>
 		<div id="headimg">
 			<h1 class="displaying-header-text">
-				<a id="name" style="<?php echo esc_attr( 'color: #' . get_header_textcolor() ); ?>" onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<a id="name" style="<?php echo esc_attr( 'color: #' . get_header_textcolor() ); ?>" onclick="return false;" href="<?php
+				echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 			</h1>
 			<div class="displaying-header-text" id="desc" style="<?php echo esc_attr( 'color: #' . get_header_textcolor() ); ?>"><?php bloginfo( 'description' ); ?></div>
-			<?php if ( get_header_image() ) : ?>
+			<?php if ( get_header_image() ) { ?>
 				<img src="<?php header_image(); ?>" alt="">
-			<?php endif; ?>
+			<?php } ?>
 		</div>
 		<?php
 	}
-endif; // popper_admin_header_image
+} // popper_admin_header_image
