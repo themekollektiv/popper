@@ -106,8 +106,8 @@ if ( ! function_exists( 'popper_index_posted_on' ) ) {
 			);
 			echo '</span>';
 		}
-		echo '</div><!-- .meta-content -->';
 
+		echo '</div><!-- .meta-content -->';
 	}
 }
 
@@ -122,7 +122,10 @@ if ( ! function_exists( 'popper_entry_footer' ) ) {
 			/* translators: used between category list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'popper' ) );
 			if ( $categories_list && popper_categorized_blog() ) {
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'popper' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf(
+					'<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'popper' ) . '</span>',
+					$categories_list
+				); // WPCS: XSS OK.
 			}
 
 			/* translators: used between tag list items, there is a space after the comma */
@@ -172,13 +175,10 @@ function popper_categorized_blog() {
 		set_transient( 'popper_categories', $all_the_cool_cats );
 	}
 
-	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so popper_categorized_blog should return true.
-		return true;
-	} else {
-		// This blog has only 1 category so popper_categorized_blog should return false.
-		return false;
-	}
+	/**
+	 * // This blog has more than 1 category so popper_categorized_blog should return true.
+	 */
+	return $all_the_cool_cats > 1;
 }
 
 /**
@@ -252,11 +252,7 @@ function validate_gravatar( $id_or_email ) {
 		wp_cache_set( $hashkey, $data, $group = '', $expire = 60 * 5 );
 	}
 
-	if ( $data === '200' ) {
-		return true;
-	} else {
-		return false;
-	}
+	return '200' === $data;
 }
 
 
@@ -284,8 +280,10 @@ if ( ! function_exists( 'popper_paging_nav' ) ) {
 		$pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
 		$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
 
-		$format = $GLOBALS[ 'wp_rewrite' ]->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
-		$format .= $GLOBALS[ 'wp_rewrite' ]->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+		$format = $GLOBALS[ 'wp_rewrite' ]->using_index_permalinks()
+				  && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+		$format .= $GLOBALS[ 'wp_rewrite' ]->using_permalinks()
+			? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
 
 		// Set up paginated links.
 		$links = paginate_links( array(
@@ -300,15 +298,14 @@ if ( ! function_exists( 'popper_paging_nav' ) ) {
 			'type'      => 'list',
 		) );
 
-		if ( $links ) :
-
+		if ( $links ) {
 			?>
 			<nav class="navigation paging-navigation" role="navigation">
 				<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'popper' ); ?></h1>
 				<?php echo $links; ?>
 			</nav><!-- .navigation -->
 			<?php
-		endif;
+		}
 	}
 }
 
@@ -436,9 +433,9 @@ function popper_custom_logo() {
 
 	if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 		return get_custom_logo();
-	} else {
-		return false;
 	}
+
+	return false;
 }
 
 /**
