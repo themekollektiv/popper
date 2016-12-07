@@ -202,7 +202,7 @@ add_action( 'save_post', 'popper_category_transient_flusher' );
  * Utility function to check if a gravatar exists for a given email or id
  * Original source: https://gist.github.com/justinph/5197810
  *
- * @param int|string|object $id_or_email A user ID,  email address, or comment object
+ * @param int|string|object $id_or_email A user ID, email address, or comment object
  *
  * @return bool if the gravatar exists or not
  */
@@ -222,7 +222,7 @@ function validate_gravatar( $id_or_email ) {
 		$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
 		if (
 			! empty( $id_or_email->comment_type ) &&
-			! in_array( $id_or_email->comment_type, (array) $allowed_comment_types )
+			! in_array( $id_or_email->comment_type, (array) $allowed_comment_types, true )
 		) {
 			return false;
 		}
