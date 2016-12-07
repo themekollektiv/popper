@@ -6,13 +6,6 @@
  *
  * @package popper
  */
-
-/**
- * Is this the first post of the front page?
- *
- * @var \WP_Query $wp_query
- */
-$first_post = $wp_query->current_post === 0 && ! is_paged() && is_home();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -27,8 +20,14 @@ $first_post = $wp_query->current_post === 0 && ! is_paged() && is_home();
 			</figure>
 		<?php } ?>
 		<?php
-		if ( (bool) $first_post ) {
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+		if ( popper_is_first_post() ) {
+			the_title(
+				sprintf(
+					'<h2 class="entry-title"><a href="%s" rel="bookmark">',
+					esc_url( get_permalink() )
+				),
+				'</a></h2>'
+			);
 
 			/** @var \WP_Post $post */
 			if ( has_excerpt( $post->ID ) ) {

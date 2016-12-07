@@ -396,3 +396,15 @@ function popper_custom_logo() {
 		return false;
 	}
 }
+
+/**
+ * Return bool value for the question if it the first post in the loop.
+ *
+ * @return bool
+ */
+function popper_is_first_post() {
+	global $wp_query;
+	$status = $wp_query->current_post === 0 && ! is_paged() && is_home();
+
+	return (bool) $status;
+}
