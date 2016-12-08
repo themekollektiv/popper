@@ -134,7 +134,7 @@ add_action( 'wp_enqueue_scripts', 'popper_scripts' );
  */
 function popper_scripts() {
 
-	wp_register_style( 'popper-style', get_stylesheet_uri() );
+	wp_register_style( 'popper-style', get_template_directory_uri() . '/style.css', array(), '20161208' );
 	wp_enqueue_style( 'popper-style' );
 
 	// Fonts: Fira Sans and Merriweather, https://www.google.com/fonts
