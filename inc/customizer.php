@@ -133,6 +133,9 @@ function popper_customize_css() {
 	if ( '#ffffff' === $header_color && ! get_header_image() ) {
 		?>
 		<style type="text/css">
+			.site-title, .site-description {
+				color: #000;
+			}
 			.main-navigation {
 				background-color: transparent;
 			}
