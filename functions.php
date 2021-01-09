@@ -86,7 +86,7 @@ function popper_setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( array( 'inc/editor-style.css', '//fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic|Merriweather:400,300,300italic,400italic,700,700italic', '/icons/style.css' ) );
+	add_editor_style( array( 'inc/editor-style.css', '//fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic|Merriweather:400,300,300italic,400italic,700,700italic', '/icons/icons.css' ) );
 }
 endif; // popper_setup
 add_action( 'after_setup_theme', 'popper_setup' );
