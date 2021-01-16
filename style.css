@@ -1271,7 +1271,7 @@ a:active {
 }
 
 .main-navigation a,
-.main-navigation ul ul li:lastchild a {
+.main-navigation ul ul li:last-child a {
 	border-bottom: 1px solid white;
 }
 
