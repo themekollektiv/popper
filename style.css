@@ -52,6 +52,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 # Footer
+# Print
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2707,4 +2708,29 @@ img.alignleft {
 
 .site-footer a {
 	color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Print
+--------------------------------------------------------------*/
+
+@media print {
+	.comment-respond,
+	.reply,
+	.post-navigation {
+		display: none;
+	}
+
+	.site-firstletter {
+		display: none;
+	}
+
+	.entry-content a:link:after,
+	.entry-content a:visited:after {
+	        content: " [" attr(href) "] "
+	}
+
+	.entry-content {
+		font-size: 12pt;
+	}
 }
