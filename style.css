@@ -2717,7 +2717,8 @@ img.alignleft {
 @media print {
 	.comment-respond,
 	.reply,
-	.main-navigation {
+	.main-navigation,
+	.edit-link {
 		display: none;
 	}
 
