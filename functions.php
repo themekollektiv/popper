@@ -148,6 +148,15 @@ function popper_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'popper_scripts' );
 
+if ( ! function_exists( 'wp_body_open' ) ) {
+	/**
+	 * Shim for wp_body_open, ensuring backwards compatibility with versions of WordPress older than 5.2.
+	 */
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+}
+
 /**
  * Implement the Custom Header feature.
  */
