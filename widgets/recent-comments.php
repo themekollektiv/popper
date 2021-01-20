@@ -61,7 +61,7 @@ class popper_recent_comments extends WP_Widget {
 										<?php echo get_avatar( get_comment_author_email($comment->comment_ID), $size = '96' ); ?>
 									</div>
 									<p class="title"><span><?php comment_author(); ?></span></p>
-									<p class="excerpt"><?php echo esc_attr(comment_excerpt($comment->comment_ID)); ?></p>
+									<p class="excerpt"><?php echo esc_html(comment_excerpt($comment->comment_ID)); ?></p>
 									<p class="original-title"><span><?php _e('on','popper'); ?></span> <?php the_title_attribute( array( 'post' => $comment->comment_post_ID ) ); ?></p>
 								</a>
 							</li>
