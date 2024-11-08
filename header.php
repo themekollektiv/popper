@@ -21,7 +21,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site <?php echo get_theme_mod( 'layout_setting', 'no-sidebar' ); ?>">
+<?php wp_body_open(); ?>
+<div id="page" class="hfeed site <?php echo esc_attr( get_theme_mod( 'layout_setting', 'no-sidebar' ) ); ?>">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'popper' ); ?></a>
 
 	<?php

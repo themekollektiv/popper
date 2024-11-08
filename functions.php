@@ -180,6 +180,15 @@ function popper_custom_attributes( $tag ) {
 	return $tag;
 }
 
+if ( ! function_exists( 'wp_body_open' ) ) {
+	/**
+	 * Shim for wp_body_open, ensuring backwards compatibility with versions of WordPress older than 5.2.
+	 */
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+}
+
 /**
  * Implement the Custom Header feature.
  */
